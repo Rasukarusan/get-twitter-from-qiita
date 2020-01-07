@@ -20,7 +20,7 @@ https://twitter.com/fizfizzz
 
 ## Install
 ```sh
-$ git clone 
+$ git clone https://github.com/Rasukarusan/get-twitter-from-qiita.git
 $ cd get-twitter-from-qiita
 $ npm install
 ```
