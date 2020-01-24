@@ -1,5 +1,10 @@
 const $ = require('jquery')(require('jsdom-no-contextify').jsdom().parentWindow)
 const fetch = require('node-fetch')
+if (process.argv.length < 3) {
+    console.log('Please input target URL');
+    console.log('Usage: $ node main.js https://qiita.com/organizations/{organization_name}');
+    return;
+}
 let organizationUrl = process.argv[2]
 
 fetch(organizationUrl)
