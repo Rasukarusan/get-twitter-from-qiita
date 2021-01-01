@@ -19,10 +19,12 @@ fetch(organizationUrl)
             type: 'GET',
         })
         .done((response) => {
-            let twitterUrl = $(response).find('.newUserPageProfile_socialLink-twitter').find('a').attr('href')
-            if( typeof twitterUrl !== 'undefined'){
-                console.log(twitterUrl)
+            process.stdout.write(user + '\t')
+            let matches = response.match(/"twitterUrl":"(.*?)",/)
+            if (matches) {
+                process.stdout.write(matches[1])
             }
+            process.stdout.write('\n')
         })
     })
 })
